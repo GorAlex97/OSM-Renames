@@ -49,7 +49,8 @@ const search = document.querySelector("#street-search");
 
 search.addEventListener('input', (v) => {
 	// searchStreet("героїв Маріуполя");
+	// encodeURI
 
-	console.log(v.value);
+	console.log(search.value);
 });
 
