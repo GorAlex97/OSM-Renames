@@ -1,0 +1,8 @@
+/*
+https://nominatim.openstreetmap.org/search.php?
+street=&
+city=%D0%9A%D0%B8%D1%97%D0%B2&
+format=jsonv2&
+addressdetails=1&
+namedetails=1
+*/
