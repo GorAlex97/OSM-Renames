@@ -48,7 +48,7 @@ const searchStreet = street => {
 const search = document.querySelector("#street-search");
 
 search.addEventListener('input', (v) => {
-	searchStreet(encodeURI(search.value));
+	searchStreet(search.value.replace(' ', '+'));
 	// searchStreet("героїв Маріуполя");
 	// encodeURI
 
