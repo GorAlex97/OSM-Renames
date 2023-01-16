@@ -8,8 +8,6 @@ const encodeQueryData = data => {
 
 const searchStreet = street => {
 	const basemap = 'https://nominatim.openstreetmap.org/search.php?';
-	// const search = document.querySelector("#street-search");
-	// const result = document.querySelector(".result");
 
 	const url = {
 		street: street,
@@ -47,4 +45,11 @@ const searchStreet = street => {
 	// console.log(basemap + encodeQueryData(url));
 };
 
-searchStreet("героїв Маріуполя");
+const search = document.querySelector("#street-search");
+
+search.addEventListener('input', (v) => {
+	// searchStreet("героїв Маріуполя");
+
+	console.log(search.nodeValue);
+});
+
