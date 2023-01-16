@@ -26,6 +26,7 @@ const searchStreet = street => {
 		.then(response => response.json())
 		.then(data => {
 			const resultContent = document.querySelector('.result-content');
+			resultContent.innerHTML = '';
 
 			// console.log(data);
 			if (data !== '') {
