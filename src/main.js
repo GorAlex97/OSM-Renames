@@ -32,8 +32,10 @@ const searchStreet = (street) => {
 			// console.log(data);
 			if (data !== "") {
 				data.forEach((e) => {
-					resultContent.innerHTML =
-						e["namedetails"]["name"] + " - " + e["namedetails"]["old_name"];
+					resultContent.append =
+						'<div class="res-item">' +
+						e["namedetails"]["name"] + " - " + e["namedetails"]["old_name"]
+					'</div>';
 				});
 			} else {
 				resultContent.innerHTML = '<span style="color:red">Error search</span>';
