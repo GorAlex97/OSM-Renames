@@ -10,7 +10,6 @@ const searchStreet = street => {
 	const basemap = 'https://nominatim.openstreetmap.org/search.php?';
 	// const search = document.querySelector("#street-search");
 	// const result = document.querySelector(".result");
-	const resultContent = document.querySelector('.result-content');
 
 	const url = {
 		street: street,
@@ -28,18 +27,21 @@ const searchStreet = street => {
 	fetch(basemap + encodeQueryData(url))
 		.then(response => response.json())
 		.then(data => {
-			console.log(data);
-			/*if (data !== '') {
+			const resultContent = document.querySelector('.result-content');
+
+			// console.log(data);
+			if (data !== '') {
 				data.forEach((e) => {
 					resultContent.innerHTML = '<div class="res-item">' +
-						'<span class="s-name">' + e["namedetails"]["name"] + '</span>' +
+						'<span class="s-name">' + e['namedetails']['name'] + '</span>' +
 						'<span class="s-divider"> - </span>' +
-						'<span class="s-old_name">' + (e["namedetails"]["old_name"] ?? 'Nevidomo') + '</span>'
+						'<span class="s-old_name">' + (e['namedetails']['old_name'] ?? 'Nevidomo') + '</span>' +
+						'<span class="s-district"> (' + e['address']['borough'] + ')</span>'
 					'</div>';
 				});
 			} else {
 				resultContent.innerHTML = '<span style="color:red">Error search</span>';
-			}*/
+			}
 		});
 
 	// console.log(basemap + encodeQueryData(url));
