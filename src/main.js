@@ -34,7 +34,8 @@ const searchStreet = street => {
 						'<span class="s-name">' + e['namedetails']['name'] + '</span>' +
 						'<span class="s-divider"> - </span>' +
 						'<span class="s-old_name">' + (e['namedetails']['old_name'] ?? 'Nevidomo') + '</span>' +
-						'<span class="s-district"> (' + e['address']['borough'] + ')</span>'
+						'<span class="s-district"> (' + e['address']['borough'] + ')</span>' +
+						'<a href="https://www.openstreetmap.org/search?query=' + e['namedetails']['name'].replace(' ', '+') + ', Київ"></a>'
 					'</div>';
 				});
 			} else {
