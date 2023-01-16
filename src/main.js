@@ -32,9 +32,10 @@ const searchStreet = (street) => {
 			// console.log(data);
 			if (data !== "") {
 				data.forEach((e) => {
-					resultContent.append =
-						'<div class="res-item">' +
-						e["namedetails"]["name"] + " - " + e["namedetails"]["old_name"]
+					resultContent.append = '<div class="res-item">' +
+						'<span class="s-name">' + e["namedetails"]["name"] + '</span>' +
+						'<span class="s-divider"> - </span>' +
+						'<span class="s-old_name">' + e["namedetails"]["old_name"] + '</span>'
 					'</div>';
 				});
 			} else {
@@ -46,15 +47,3 @@ const searchStreet = (street) => {
 };
 
 searchStreet("героїв Маріуполя");
-
-  // console.log("test 123");
-
-/*console.log(
-  encodeQueryData({
-	street: "test",
-	city: "Київ",
-	format: "jsonv2",
-	addressdetails: 1,
-	namedetails: 1
-  })
-);*/
